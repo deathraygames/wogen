@@ -166,6 +166,12 @@ let wogen = (function(){
 				i--;
 			};
 		}
+		getMinCoords() {
+			return {x: this.width / -2, y: this.height / -2};
+		}
+		getMaxCoords() {
+			return {x: this.width / 2, y: this.height / 2};
+		}
 		getRandomLoc(notNear, minD, c) {
 			const x = randInt(this.width) - (this.width / 2);
 			const y = randInt(this.height) - (this.width / 2);
