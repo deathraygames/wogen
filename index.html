@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>wogen.js World Generator</title>
+	<style>
+		body { 
+			background: #000; text-align: center;
+			font-family: 'Consolas';
+			color: white;
+		}
+		pre {
+			/* border: solid 1px #aaa; */
+			color: #eee;
+			background: transparent;
+			font-family: 'Consolas';
+			font-size: 6px;
+		}
+	</style>
+</head>
+<body>
+<h1>wogen</h1>
+<div>
+	<pre id="worldTextBox"></pre>
+</div>
+
+<!-- <script src="http://deathraygames.com/js/ga.js"></script> -->
+<div class="scripts">
+	<script src="scripts/wogen.js"></script>
+	<script>
+		const world = wogen.createWorld({
+			width: 800,
+			height: 600
+		});
+		console.log(world);
+		const textbox = document.getElementById("worldTextBox");
+		textbox.innerHTML = world.toText();
+		console.log(textbox, textbox.value);
+	</script>
+</div>
+</body>
